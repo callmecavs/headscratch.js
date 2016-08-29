@@ -29,6 +29,7 @@ var headscratch = function headscratch(fx) {
     }
 
     // cache miss -> compute result, populate cache, return result
+    // FIXME: broken for multiple arguments
     miss = fx(_arguments);
 
     cache[parsed] = miss;

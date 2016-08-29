@@ -22,6 +22,7 @@ const headscratch = fx => {
     }
 
     // cache miss -> compute result, populate cache, return result
+    // FIXME: broken for multiple arguments
     miss = fx(arguments)
 
     cache[parsed] = miss
