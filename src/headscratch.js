@@ -1,34 +1,40 @@
-const headscratch = fx => {
-  // arguments -> result cache
-  const cache = {}
+// TODO: add custom serializer support
+// TODO: `this` context?
+// FIXME: broken for multiple arguments
 
-  // prevent memory leaks, if memoized function is called rapidly
+const headscratch = (fx, {
+  // default options
+  cache = {},
+  serialize = JSON.stringify
+} = {}) => {
+  // caches for intermediate calculations,
+  // to prevent memory leaks if memoized function is called rapidly
   let parsed
   let hit
   let miss
 
-  // TODO: add custom serializer support
-  // TODO: `this` context?
+  const memoized = () => {
+    // run serializer on arguments
+    parsed = serialize(arguments)
 
-  return () => {
-    // serialize arguments
-    parsed = JSON.stringify(arguments)
-
-    // cache hit -> return cached result
+    // cache hit
+    // return cached result
     hit = cache[parsed]
 
     if(hit) {
       return hit
     }
 
-    // cache miss -> compute result, populate cache, return result
-    // FIXME: broken for multiple arguments
+    // cache miss
+    // compute result, populate cache, return result
     miss = fx(arguments)
 
     cache[parsed] = miss
 
     return miss
   }
+
+  return memoized
 }
 
 export default headscratch
