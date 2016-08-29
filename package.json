@@ -1,0 +1,45 @@
+{
+  "name":        "headscratch.js",
+  "description": "",
+
+  "main":        "dist/headscratch.js",
+  "module":      "dist/headscratch.mjs",
+  "jsnext:main": "dist/headscratch.mjs",
+
+  "version": "0.0.1",
+  "license": "",
+
+  "repository": "",
+
+  "author": {
+    "name":  "",
+    "email": "",
+    "url":   ""
+  },
+
+  "files": [
+    "src",
+    "dist"
+  ],
+
+  "keywords": [
+
+  ],
+
+  "dependencies": {
+
+  },
+
+  "devDependencies": {
+    "babel-preset-es2015":        "*",
+    "babel-preset-stage-0":       "*",
+    "browser-sync":               "*",
+    "del":                        "*",
+    "gulp":                       "*",
+    "node-notifier":              "*",
+    "rollup":                     "*",
+    "rollup-plugin-babel":        "*",
+    "rollup-plugin-commonjs":     "*",
+    "rollup-plugin-node-resolve": "*"
+  }
+}
