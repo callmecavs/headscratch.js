@@ -8,6 +8,7 @@ const headscratch = fx => {
   let miss
 
   // TODO: add custom serializer support
+  // TODO: `this` context?
 
   return () => {
     // serialize arguments

@@ -21,6 +21,7 @@ var headscratch = function headscratch(fx) {
   var miss = void 0;
 
   // TODO: add custom serializer support
+  // TODO: `this` context?
 
   return function () {
     // serialize arguments
