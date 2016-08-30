@@ -19,7 +19,7 @@ import headscratch from 'headscratch.js'
 const add1 = num => num + 1
 
 // memoize it
-const memoizedAdd1 = headscratch(add)
+const memoizedAdd1 = headscratch(add1)
 
 // call the memoized version, passing a single argument or n arguments
 memoizedAdd1(1)        // LOG: 2
