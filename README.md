@@ -26,6 +26,33 @@ memoizedAdd1(1)        // LOG: 2
 memoizedAdd1(1, 2)     // LOG: 2
 ```
 
+## Options
+
+Headscratch support an `options` object, passed as the the second parameter. Defaults shown below:
+
+```es6
+const memoized = headscratch(func, {
+  cache = {},
+  serialize = JSON.stringify
+})
+```
+
+### cache
+
+Pass a cache to start with, rather than creating an empty one.
+
+```es6
+
+```
+
+### serialize
+
+Pass a function to serialize the arguments, which is used to create the cache key.
+
+```es6
+
+```
+
 ## License
 
 [MIT](https://opensource.org/licenses/MIT). © 2016 Michael Cavalea
