@@ -1,20 +1,20 @@
 {
   "name":        "headscratch.js",
-  "description": "",
+  "description": "Memoize a function, making it think about the arguments.",
 
   "main":        "dist/headscratch.js",
   "module":      "dist/headscratch.mjs",
   "jsnext:main": "dist/headscratch.mjs",
 
   "version": "0.0.1",
-  "license": "",
+  "license": "MIT",
 
-  "repository": "",
+  "repository": "callmecavs/headscratch.js",
 
   "author": {
-    "name":  "",
-    "email": "",
-    "url":   ""
+    "name":  "Michael Cavalea",
+    "email": "callmecavs@gmail.com",
+    "url":   "http://callmecavs.com/"
   },
 
   "files": [
@@ -23,12 +23,8 @@
   ],
 
   "keywords": [
-
+    "memoize"
   ],
-
-  "dependencies": {
-
-  },
 
   "devDependencies": {
     "babel-preset-es2015":        "*",
