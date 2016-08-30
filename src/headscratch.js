@@ -1,33 +1,31 @@
-// TODO: add custom serializer support
-// TODO: `this` context?
-// FIXME: broken for multiple arguments
-
 const headscratch = (fx, {
   // default options
   cache = {},
   serialize = JSON.stringify
 } = {}) => {
-  // caches for intermediate calculations,
-  // to prevent memory leaks if memoized function is called rapidly
+  // caches for intermediate calculations
+  // prevents memory leaks if memoized function is called frequently
   let parsed
   let hit
   let miss
 
-  const memoized = () => {
-    // run serializer on arguments
-    parsed = serialize(arguments)
+  const memoized = (...args) => {
+    // determine cache key based on # of arguments
+    args.length === 0
+      ? parsed = args[0]
+      : parsed = serialize(args)
 
-    // cache hit
-    // return cached result
+    // cache hit?
+    // exit early, with cached results
     hit = cache[parsed]
 
     if(hit) {
       return hit
     }
 
-    // cache miss
-    // compute result, populate cache, return result
-    miss = fx(arguments)
+    // cache miss?
+    // compute results, populate cache, return results
+    miss = fx.apply(undefined, args)
 
     cache[parsed] = miss
 
