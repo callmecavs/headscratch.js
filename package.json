@@ -3,8 +3,8 @@
   "description": "Memoize a function, making it think about the arguments.",
 
   "main":        "dist/headscratch.js",
-  "module":      "dist/headscratch.mjs",
-  "jsnext:main": "dist/headscratch.mjs",
+  "module":      "dist/headscratch.module.js",
+  "jsnext:main": "dist/headscratch.module.js",
 
   "version": "0.0.1",
   "license": "MIT",
