@@ -1,4 +1,4 @@
-const headscratch = (fx, {
+const headscratch = (func, {
   // default options
   cache = {},
   serialize = JSON.stringify
@@ -25,7 +25,7 @@ const headscratch = (fx, {
 
     // cache miss?
     // compute results, populate cache, return results
-    miss = fx.apply(undefined, args)
+    miss = func.apply(undefined, args)
 
     cache[parsed] = miss
 

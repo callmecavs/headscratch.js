@@ -4,7 +4,7 @@
  * License: 
  */
 
-var headscratch = function headscratch(fx) {
+var headscratch = function headscratch(func) {
   var _ref = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
 
   var _ref$cache = _ref.cache;
@@ -36,7 +36,7 @@ var headscratch = function headscratch(fx) {
 
     // cache miss?
     // compute results, populate cache, return results
-    miss = fx.apply(undefined, args);
+    miss = func.apply(undefined, args);
 
     cache[parsed] = miss;
 
