@@ -19,7 +19,7 @@ const headscratch = (func, {
     // exit early, with cached results
     hit = cache[parsed]
 
-    if(hit) {
+    if (hit) {
       return hit
     }
 
